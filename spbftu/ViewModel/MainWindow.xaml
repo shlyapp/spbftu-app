@@ -4,9 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:spbftu"
+        xmlns:svgc1="http://sharpvectors.codeplex.com/svgc/"
         mc:Ignorable="d"
-        Title="СПБГТУ - Информация" Height="800" Width="1200">
+        Title="СПБГТУ - Информация" Height="1000" Width="1400">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
+        <Image Grid.Row="0"
+               Source="{StaticResource logoGeometry_main_logoDrawingImage}"
+               Margin="60 30 60 30"/>
+        
     </Grid>
 </Window>

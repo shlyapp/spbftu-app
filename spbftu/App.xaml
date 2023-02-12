@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:spbftu"
              StartupUri="ViewModel/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/Styles.xaml"/>
+                <ResourceDictionary x:Name="Logo" Source="View/Logo.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
