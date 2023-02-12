@@ -1,0 +1,9 @@
+﻿<Application x:Class="spbftu.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:spbftu"
+             StartupUri="ViewModel/MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
