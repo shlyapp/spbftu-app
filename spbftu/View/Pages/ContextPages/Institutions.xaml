@@ -1,0 +1,151 @@
+﻿<Page x:Class="spbftu.View.Pages.ContextPages.Institutions"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:spbftu.View.Pages.ContextPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1400"
+      Background="#F4F4F4"
+      
+      xmlns:viewmodel="clr-namespace:spbftu.ViewModel"
+      d:DataContext="{d:DesignInstance Type=viewmodel:InstitutionsViewModel}"
+      
+      Title="Institutions">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Институты"
+                   Style="{DynamicResource labelText}"/>
+
+        <ListView Grid.Row="1"
+                  Margin="2"
+                  Name="buttonsNavigation"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  BorderThickness="0"
+                  Background="#F4F4F4"
+                  Padding="0 0 0 0"
+                  ItemsSource="{Binding Institutions}">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel
+                        Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        
+                        />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="30 50"
+                            Background="White"
+                            RenderTransformOrigin="1 1"
+                            Padding="20"
+                            CornerRadius="20"
+                            MinHeight="200">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="20"/>
+                        </Border.Effect>
+                        <Grid MinWidth="1000" MinHeight="300" MaxWidth="1500">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" 
+                                   Source="{Binding PathImage}"
+                                   Margin="10"
+                                   />
+
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <TextBlock Text="{Binding Abbreviation}"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           Foreground="LightGray"
+                                           FontFamily="Bahnschrift SemiBold"
+                                           />
+                                <TextBlock Text="{Binding Name}"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           FontFamily="Bahnschrift SemiBold"
+                                           Margin="0 0 0 20"
+                                           />
+                                <TextBlock Text="{Binding DirectoryName, StringFormat=Директор: {0}}"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           Foreground="LightGray"
+                                           FontFamily="Bahnschrift SemiBold"
+                                           Margin="0 0 0 20"
+                                           />
+                                <TextBlock Text="{Binding PhoneNumber, StringFormat=Номер: {0}}"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           Foreground="LightGray"
+                                           FontFamily="Bahnschrift SemiBold"
+                                           Margin="0 0 0 20"
+                                           />
+                                <TextBlock Text="{Binding Email, StringFormat=Почта: {0}}"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left"
+                                           FontSize="20"
+                                           Foreground="LightGray"
+                                           FontFamily="Bahnschrift SemiBold"
+                                           />
+                            </StackPanel>
+                        </Grid>
+                        <Border.RenderTransform>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        </Border.RenderTransform>
+                        <Border.Triggers>
+
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.1" Duration="0:0:.4">
+                                            <DoubleAnimation.EasingFunction>
+                                                <QuarticEase />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.1" Duration="0:0:.4" >
+                                            <DoubleAnimation.EasingFunction>
+                                                <QuarticEase />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1" Duration="0:0:.4">
+                                            <DoubleAnimation.EasingFunction>
+                                                <QuarticEase />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1" Duration="0:0:.4" >
+                                            <DoubleAnimation.EasingFunction>
+                                                <QuarticEase />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+
+                        </Border.Triggers>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

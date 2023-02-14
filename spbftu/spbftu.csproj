@@ -9,12 +9,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\aspirantura.jpg" />
+    <None Remove="Resources\instituty.jpg" />
+    <None Remove="Resources\kolledzh.jpg" />
+    <None Remove="Resources\Logo_SPbFTU_RGB_rus.png" />
+    <None Remove="Resources\pomosh.jpg" />
+    <None Remove="Resources\postuplenie.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Logo_SPbFTU_RGB_rus.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="Resources\" />
+    <Resource Include="Resources\1.jpg" />
+    <Resource Include="Resources\2.jpg" />
+    <Resource Include="Resources\3.jpg" />
+    <Resource Include="Resources\4.jpg" />
+    <Resource Include="Resources\5.jpg" />
+    <Resource Include="Resources\6.jpg" />
+    <Resource Include="Resources\7.jpg" />
+    <Resource Include="Resources\aspirantura.jpg" />
+    <Resource Include="Resources\instituty.jpg" />
+    <Resource Include="Resources\kolledzh.jpg" />
+    <Resource Include="Resources\Logo_SPbFTU_RGB_rus.png" />
+    <Resource Include="Resources\pomosh.jpg" />
+    <Resource Include="Resources\postuplenie.jpg" />
   </ItemGroup>
 
   <ItemGroup>

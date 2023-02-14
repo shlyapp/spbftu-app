@@ -1,0 +1,58 @@
+﻿<Page x:Class="spbftu.View.Pages.ContextPages.Admission"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:spbftu.View.Pages.ContextPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1400"
+      Background="#F4F4F4"
+      Title="Admission">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Поступление"
+                   Style="{DynamicResource labelText}"/>
+
+        <RichTextBox Grid.Row="1">
+            <FlowDocument>
+                <Paragraph>
+                    Часы работы приемной комиссии:
+                </Paragraph>
+                <Paragraph>
+                    Пн – Пт: 10:00 – 17:00
+                </Paragraph>
+                <Paragraph>
+                    Контактная информация:
+                </Paragraph>
+                <Paragraph>
+                    +7 (812) 217-92-97
+                </Paragraph>
+                <Paragraph>
+                    pricom@spbftu.ru
+                </Paragraph>
+                <Paragraph>
+                    194021, Санкт-Петербург, Институтский переулок, дом 5, литера Б, Учебный корпус (2 учебное здание), 3 этаж, Станция метро «Лесная», «Площадь Мужества».
+                </Paragraph>
+                <Paragraph>
+                    Как добраться?
+                </Paragraph>
+                <Paragraph>
+                    - от станции метро «Лесная», по улице Парголовская пешком 10 минут;
+                </Paragraph>
+                <Paragraph>
+                    - от станции метро «Площадь Мужества» на трамвае № 40, 55 до остановки «Институтский переулок», пешком 5 минут;
+                </Paragraph>
+                <Paragraph>
+                    - от станции метро «Черная речка» на троллейбусе № 6, 34 до остановки «Лесотехническая академия».
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Page>

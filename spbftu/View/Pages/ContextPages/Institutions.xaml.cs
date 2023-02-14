@@ -1,0 +1,31 @@
+﻿using spbftu.ViewModel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace spbftu.View.Pages.ContextPages
+{
+    /// <summary>
+    /// Логика взаимодействия для Institutions.xaml
+    /// </summary>
+    public partial class Institutions : Page
+    {
+        public Institutions()
+        {
+            InitializeComponent();
+
+            DataContext = new InstitutionsViewModel();
+        }
+    }
+}

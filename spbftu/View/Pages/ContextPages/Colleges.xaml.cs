@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace spbftu
+namespace spbftu.View.Pages.ContextPages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для College.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Colleges : Page
     {
-        public MainWindow()
+        public Colleges()
         {
             InitializeComponent();
         }

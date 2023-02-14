@@ -1,0 +1,38 @@
+﻿<Window x:Class="spbftu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:spbftu"
+        xmlns:svgc1="http://sharpvectors.codeplex.com/svgc/"
+        mc:Ignorable="d"
+        Background="#F4F4F4"
+        WindowStartupLocation="CenterScreen"       
+        xmlns:viewmodel="clr-namespace:spbftu.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:ApplicationViewModel}"
+        Title="СПБГТУ - Информация" Height="1100" Width="1400">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0"
+               Source="{StaticResource logoGeometry_main_logoDrawingImage}"
+               Margin="10"
+               MaxHeight="500"
+               MaxWidth="1000"
+               Cursor="Hand">
+            <Image.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding NavigatedToHome}"/>
+            </Image.InputBindings>
+        </Image>
+
+        <Frame Grid.Row="1"
+               Content="{Binding CurrentPage, UpdateSourceTrigger=PropertyChanged}"
+               Opacity="{Binding FrameOpacity, UpdateSourceTrigger=PropertyChanged}"
+               NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>
